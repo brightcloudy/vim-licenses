@@ -132,12 +132,28 @@ Commands
 Settings
 --------
 
-### `g:licenses_authors_name option`
+### `g:licenses_copyright_holders_name`
 
-The name of author to automatically insert in the buffer in the licence.
+The name of the copyright holder to automatically be replaced in the license when inserted.
+
+```vim
+let g:licenses_copyright_holders_name = 'Last Name, First Name <my@email.com>'
+```
+
+### `g:licenses_authors_name`
+
+The name of author to automatically insert in the buffer in the license.
 
 ```vim
 let g:licenses_authors_name = 'Last Name, First Name <my@email.com>'
+```
+
+### `g:licenses_suppress_identical`
+
+If you have identical values set for both copyright holder and author names, this flag will suppress the printing of the author information. If the two values differ, then both will still be replaced into the license.
+
+```vim
+let g:licenses_suppress_identical = 1
 ```
 
 ### `g:licenses_default_commands`
