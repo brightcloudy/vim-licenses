@@ -43,6 +43,14 @@ if !exists('g:licenses_authors_name')
     let g:licenses_authors_name = ''
 endif
 
+if !exists('g:licenses_suppress_identical')
+    let g:licenses_suppress_identical = 1
+endif
+
+if g:licenses_authors_name == g:licenses_copyright_holders_name && g:licenses_suppress_identical
+    let g:licenses_authors_name = ''
+endif
+
 if !exists('g:licenses_default_commands')
     let g:licenses_default_commands =
         \['affero'
